@@ -32,36 +32,32 @@ const PillNavbar = () => {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-x-2 text-sm ml-4">
-  {/* LOGIN BUTTON */}
-  <Link
-    href="/login"
-    className="relative overflow-hidden text-neutral-300 hover:text-white transition-colors px-5 py-2 rounded-xl ring-1 ring-neutral-700 hover:bg-neutral-700/50 font-semibold group"
-  >
-    <span className="block transition-transform duration-300 group-hover:-translate-y-[150%]">
-      Log In
-    </span>
-    <span className="block absolute inset-0 flex items-center justify-center translate-y-[150%] transition-transform duration-300 group-hover:translate-y-0">
-      Log In
-    </span>
-  </Link>
+        {/* LOGIN BUTTON */}
+        <Link
+            href="/login"
+            className="relative overflow-hidden text-neutral-300 hover:text-white transition-colors px-5 py-2 rounded-xl ring-1 ring-neutral-700 hover:bg-neutral-700/50 font-semibold group"
+        >
+            <span className="block transition-transform duration-300 group-hover:-translate-y-[150%]">
+            Log In
+            </span>
+            <span className="block absolute inset-0 flex items-center justify-center translate-y-[150%] transition-transform duration-300 group-hover:translate-y-0">
+            Log In
+            </span>
+        </Link>
 
-  {/* SIGNUP BUTTON */}
-  <Link
-    href="/signup"
-    className="relative overflow-hidden bg-white text-black font-medium px-5 py-2 rounded-xl hover:bg-neutral-200 transition-colors font-semibold group"
-    style={{
-      boxShadow:
-        "0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2)",
-    }}
-  >
-    <span className="block transition-transform duration-300 group-hover:-translate-y-[150%]">
-      Sign Up
-    </span>
-    <span className="block absolute inset-0 flex items-center justify-center translate-y-[150%] transition-transform duration-300 group-hover:translate-y-0">
-      Sign Up
-    </span>
-  </Link>
-</div>
+        {/* SIGNUP BUTTON */}
+        <Link
+  href="/signup"
+  className="relative overflow-hidden bg-white text-black font-medium px-5 py-2 rounded-xl hover:bg-neutral-200 transition-all duration-300 font-semibold group [--glow-shadow:0_0_20px_rgba(255,255,255,0.5)] hover:[--glow-shadow:0_0_40px_rgba(255,255,255,0.9)] shadow-[var(--glow-shadow)]"
+>
+  <span className="block transition-transform duration-300 group-hover:-translate-y-[150%]">
+    Sign Up
+  </span>
+  <span className="block absolute inset-0 flex items-center justify-center translate-y-[150%] transition-transform duration-300 group-hover:translate-y-0">
+    Sign Up
+  </span>
+</Link>
+        </div>
 
 
       </div>
