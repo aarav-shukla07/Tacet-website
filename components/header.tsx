@@ -17,7 +17,7 @@ const PillNavbar = () => {
   return (
     <nav className={` fixed top-10 left-1/2 -translate-x-1/2 z-50`}>
       <div className="flex items-center gap-x-2 px-1 py-1 rounded-2xl bg-neutral-800/50 backdrop-blur-xl ring-1 ring-white/10">
-        
+        <div className="absolute inset-0 bg-noise rounded-3xl"></div>
         {/* Logo */}
         <Link href="/" className="p-2 text-white hover:bg-white/10 rounded-full transition-colors">
           <LogoIcon />
