@@ -1,7 +1,4 @@
 import Link from 'next/link';
-import { jetbrainsMono, poppins } from '@/lib/fonts';
-import { Poppins } from 'next/font/google';
-import { Weight } from 'lucide-react';
 
 // A simple SVG icon component for the logo
 const LogoIcon = () => (
@@ -13,6 +10,22 @@ const LogoIcon = () => (
   </svg>
 );
 
+// A reusable component for the animated links to keep the code clean
+const AnimatedLink = ({ href, children }: { href: string, children: React.ReactNode }) => (
+  <Link
+    href={href}
+    className="relative overflow-hidden text-neutral-300 hover:text-white transition-colors px-3 py-2 group text-sm"
+  >
+    <span className="block transition-transform duration-300 group-hover:-translate-y-[150%]">
+      {children}
+    </span>
+    <span className="block absolute inset-0 flex items-center justify-center translate-y-[150%] transition-transform duration-300 group-hover:translate-y-0">
+      {children}
+    </span>
+  </Link>
+);
+
+
 const PillNavbar = () => {
   return (
     <nav className={` fixed top-10 left-1/2 -translate-x-1/2 z-50`}>
@@ -23,11 +36,12 @@ const PillNavbar = () => {
           <LogoIcon />
         </Link>
         
-        {/* Navigation Links */}
-        <div className="flex items-center gap-x-2 text-sm text-neutral-300">
-          <Link href="/home" className="hover:text-white transition-colors px-3 py-2">Home</Link>
-          <Link href="/about" className="hover:text-white transition-colors px-3 py-2">About</Link>
-          <Link href="/discover" className="hover:text-white transition-colors px-3 py-2">Contact</Link>
+        {/* --- UPDATED NAVIGATION LINKS --- */}
+        {/* The simple links have been replaced with the new AnimatedLink component */}
+        <div className="flex items-center gap-x-2">
+          <AnimatedLink href="/home">Home</AnimatedLink>
+          <AnimatedLink href="/about">About</AnimatedLink>
+          <AnimatedLink href="/discover">Contact</AnimatedLink>
         </div>
 
         {/* Action Buttons */}
@@ -47,19 +61,17 @@ const PillNavbar = () => {
 
         {/* SIGNUP BUTTON */}
         <Link
-  href="/signup"
-  className="relative overflow-hidden bg-white text-black font-medium px-5 py-2 rounded-xl hover:bg-neutral-200 transition-all duration-300 font-semibold group [--glow-shadow:0_0_20px_rgba(255,255,255,0.5)] hover:[--glow-shadow:0_0_40px_rgba(255,255,255,0.9)] shadow-[var(--glow-shadow)]"
->
-  <span className="block transition-transform duration-300 group-hover:-translate-y-[150%]">
-    Sign Up
-  </span>
-  <span className="block absolute inset-0 flex items-center justify-center translate-y-[150%] transition-transform duration-300 group-hover:translate-y-0">
-    Sign Up
-  </span>
-</Link>
+          href="/signup"
+          className="relative overflow-hidden bg-white text-black font-medium px-5 py-2 rounded-xl hover:bg-neutral-200 transition-all duration-300 font-semibold group [--glow-shadow:0_0_20px_rgba(255,255,255,0.5)] hover:[--glow-shadow:0_0_40px_rgba(255,255,255,0.9)] shadow-[var(--glow-shadow)]"
+        >
+          <span className="block transition-transform duration-300 group-hover:-translate-y-[150%]">
+            Sign Up
+          </span>
+          <span className="block absolute inset-0 flex items-center justify-center translate-y-[150%] transition-transform duration-300 group-hover:translate-y-0">
+            Sign Up
+          </span>
+        </Link>
         </div>
-
-
       </div>
     </nav>
   );
