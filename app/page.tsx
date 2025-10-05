@@ -1,19 +1,35 @@
-// In app/layout.js
-import PillNavbar from '@/components/header'; // Adjust the path if needed
+"use client";
+
+import PillNavbar from '@/components/header';
+import AnimatedImageGroups from '@/components/AnimatedImageGroups';
 import './globals.css';
+import { LayoutTextFlip } from '@/components/LayoutTextFlip';
 
-export const metadata = {
-  title: 'TACET',
-  description: 'My awesome new website',
-};
+const roles = ["technical interviews", "live coding challenges", "on-screen assessments", "pair programming"];
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function Home() {
   return (
-    <html lang="en">
-      <body>
-        <PillNavbar />
-        <main>{children}</main>
-      </body>
-    </html>
+    <div className="relative w-full h-screen bg-black text-white overflow-hidden">
+      <div className="absolute inset-0 opacity-40">
+        <AnimatedImageGroups />
+      </div>
+
+      <PillNavbar />
+
+      <div className="relative z-10 flex flex-col items-center justify-center h-full pointer-events-none">
+        <h1 className="text-8xl md:text-9xl font-bold tracking-tighter">TACET</h1>
+
+        <LayoutTextFlip
+          text="Your silent advantage in"
+          words={roles}
+          duration={2200}
+          containerClassName="mt-4"
+          // --- THIS IS THE KEY CHANGE ---
+          // The flipping text inside the box is now explicitly set to white.
+          wordClassName="text-white"
+        />
+      </div>
+    </div>
   );
 }
+
