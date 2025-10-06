@@ -2,6 +2,7 @@
 
 import PillNavbar from '@/components/header'; // Corrected path
 import './globals.css';
+import CustomCursor from '@/components/CustomCursor';
 
 export const metadata = {
   title: 'TACET',
@@ -13,6 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       {/* Add 'relative' to make positioning the animation easier */}
       <body className="relative">
+        <CustomCursor />
         <PillNavbar />
         <main>{children}</main>
       </body>

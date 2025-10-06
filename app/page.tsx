@@ -4,6 +4,7 @@ import PillNavbar from '@/components/header';
 import AnimatedImageGroups from '@/components/AnimatedImageGroups';
 import './globals.css';
 import { LayoutTextFlip } from '@/components/LayoutTextFlip';
+import ScrollIndicator from '@/components/ScrollIndicator';
 
 const roles = ["technical interviews", "live coding challenges", "on-screen assessments", "pair programming"];
 
@@ -29,6 +30,7 @@ export default function Home() {
           wordClassName="text-white"
         />
       </div>
+      <ScrollIndicator />
     </div>
   );
 }
