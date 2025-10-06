@@ -58,11 +58,11 @@ export default function InteractiveCursor() {
         style={{
           // --- FIX 2: Dynamic Styling for Transparent Ring Effect ---
           // When hovering, the cursor becomes a larger, transparent ring with a border.
-          width: hoveringInteractive ? '40px' : '15px',
-          height: hoveringInteractive ? '40px' : '15px',
+          width: hoveringInteractive ? '30px' : '13px',
+          height: hoveringInteractive ? '30px' : '13px',
           transform: 'translate(-50%, -50%)',
-          backgroundColor: hoveringInteractive ? 'transparent' : '#fffec4',
-          border: hoveringInteractive ? '2px solid #fffec4' : 'none',
+          backgroundColor: hoveringInteractive ? 'transparent' : '#b0b0acff',
+          border: hoveringInteractive ? '2px solid #939391ff' : 'none',
         }}
       />
     </div>
