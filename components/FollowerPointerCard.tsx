@@ -72,10 +72,6 @@ export const FollowPointer = ({
     "#0ea5e9",
     "#737373",
     "#14b8a6",
-    "#22c55e",
-    "#3b82f6",
-    "#ef4444",
-    "#eab308",
   ];
   return (
     <motion.div
