@@ -1,22 +1,25 @@
-// app/layout.tsx
+"use client";
 
-import PillNavbar from '@/components/header'; // Corrected path
+import PillNavbar from '@/components/header';
 import './globals.css';
 import CustomCursor from '@/components/CustomCursor';
+import { TransitionProvider } from '@/context/TransitionContext';
+import PageTransition from '@/components/PageTransition';
 
-export const metadata = {
-  title: 'TACET',
-  description: 'My awesome new website',
-};
+// The root layout is now a client component to support the transition context.
+// Metadata should be handled in individual page.tsx or a template.tsx file.
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      {/* Add 'relative' to make positioning the animation easier */}
-      <body className="relative">
-        <CustomCursor />
-        <PillNavbar />
-        <main>{children}</main>
+      <body>
+        <TransitionProvider>
+            <PageTransition />
+            <CustomCursor />
+            {/* The navbar and main content are direct children of the provider */}
+            <PillNavbar />
+            <main>{children}</main>
+        </TransitionProvider>
       </body>
     </html>
   );
