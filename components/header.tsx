@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import TransitionLink from './TransitionLink'; // Using relative path for robustness
 
 // A simple SVG icon component for the logo
 const LogoIcon = () => (
@@ -12,7 +12,7 @@ const LogoIcon = () => (
 
 // A reusable component for the animated links to keep the code clean
 const AnimatedLink = ({ href, children }: { href: string, children: React.ReactNode }) => (
-  <Link
+  <TransitionLink
     href={href}
     className="relative overflow-hidden text-neutral-300 hover:text-white transition-colors px-3 py-2 group text-sm"
   >
@@ -22,7 +22,7 @@ const AnimatedLink = ({ href, children }: { href: string, children: React.ReactN
     <span className="block absolute inset-0 flex items-center justify-center translate-y-[150%] transition-transform duration-300 group-hover:translate-y-0">
       {children}
     </span>
-  </Link>
+  </TransitionLink>
 );
 
 
@@ -32,12 +32,12 @@ const PillNavbar = () => {
       <div className="flex items-center gap-x-2 px-1 py-1 rounded-2xl bg-neutral-800/50 backdrop-blur-xl ring-1 ring-white/10">
         <div className="absolute inset-0 bg-noise rounded-3xl"></div>
         {/* Logo */}
-        <Link href="/" className="p-2 text-white hover:bg-white/10 rounded-full transition-colors">
+        <TransitionLink href="/" className="p-2 text-white hover:bg-white/10 rounded-full transition-colors">
           <LogoIcon />
-        </Link>
+        </TransitionLink>
         
         {/* --- UPDATED NAVIGATION LINKS --- */}
-        {/* The simple links have been replaced with the new AnimatedLink component */}
+        {/* The simple links have been replaced with the new AnimatedLink component which uses TransitionLink */}
         <div className="flex items-center gap-x-2">
           <AnimatedLink href="/home">Home</AnimatedLink>
           <AnimatedLink href="/about">About</AnimatedLink>
@@ -47,7 +47,7 @@ const PillNavbar = () => {
         {/* Action Buttons */}
         <div className="flex items-center gap-x-2 text-sm ml-4">
         {/* LOGIN BUTTON */}
-        <Link
+        <TransitionLink
             href="/login"
             className="relative overflow-hidden text-neutral-300 hover:text-white transition-colors px-5 py-2 rounded-xl ring-1 ring-neutral-700 hover:bg-neutral-700/50 font-semibold group"
         >
@@ -57,10 +57,10 @@ const PillNavbar = () => {
             <span className="block absolute inset-0 flex items-center justify-center translate-y-[150%] transition-transform duration-300 group-hover:translate-y-0">
             Log In
             </span>
-        </Link>
+        </TransitionLink>
 
         {/* SIGNUP BUTTON */}
-        <Link
+        <TransitionLink
           href="/signup"
           className="relative overflow-hidden bg-white text-black font-medium px-5 py-2 rounded-xl hover:bg-neutral-200 transition-all duration-300 font-semibold group [--glow-shadow:0_0_20px_rgba(255,255,255,0.5)] hover:[--glow-shadow:0_0_40px_rgba(255,255,255,0.9)] shadow-[var(--glow-shadow)]"
         >
@@ -70,7 +70,7 @@ const PillNavbar = () => {
           <span className="block absolute inset-0 flex items-center justify-center translate-y-[150%] transition-transform duration-300 group-hover:translate-y-0">
             Sign Up
           </span>
-        </Link>
+        </TransitionLink>
         </div>
       </div>
     </nav>
@@ -78,3 +78,6 @@ const PillNavbar = () => {
 };
 
 export default PillNavbar;
+
+
+
