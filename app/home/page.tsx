@@ -6,7 +6,12 @@ import { motion } from "framer-motion";
 import { CheckCircle, Code, Download, Link, Zap } from "lucide-react";
 import "../globals.css";
 import { jetbrainsMono,poppins } from "@/lib/fonts";
-import { MaskContainer } from "@/components/ui/svg-mask-effect";
+import { LayoutTextFlip } from "@/components/LayoutTextFlip";
+
+const roles = [
+  "Know-how",
+  "Working",
+];
 
 // Feature Card Component
 const FeatureCard = ({
@@ -100,11 +105,32 @@ export default function Home() {
 
         {/* KNOW HOW SECTION */}
         <section className="text-center max-w-6xl mx-auto mb-24">
-            <motion.h1
-                className={`${poppins.className} text-5xl md:text-7xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400`}
-            >
-                Know-how?
+            <motion.h1>
+                <div className="mt-4">
+                              <LayoutTextFlip
+                                words={roles}
+                                duration={2200}
+                                containerClassName="mt-12"
+                                wordClassName={`${poppins.className} text-5xl md:text-6sxl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400`}
+                              />
+                            </div>
             </motion.h1>
+            <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-3xl md:text-4xl text-white max-w-5xl mx-auto mb-2 font-semibold mt-2"
+          >
+            Watch TACET performing on real scenarios, not just promise.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-lg md:text-xl text-neutral-300 max-w-4xl mx-auto mb-4"
+          >
+            Witness how TACET operates seamlessly during live technical assessments and coding interviews, providing the edge you need—completely undetected.
+          </motion.p>
         </section>
         
 
