@@ -28,7 +28,7 @@ export default function Home() {
       <MaskContainer
         revealText={
           <div className="flex flex-col items-center justify-center h-full text-white pointer-events-none">
-            <TransitionLink href="/about" className="pointer-events-auto">
+            <TransitionLink href="/home" className="pointer-events-auto">
                 <h1 className="text-8xl md:text-9xl font-bold tracking-tighter cursor-pointer">
                   TACET
                 </h1>
@@ -48,7 +48,7 @@ export default function Home() {
       >
         {/* This is the content that gets REVEALED through the mask */}
         <div className="flex flex-col items-center justify-center h-full text-white pointer-events-none">
-          <TransitionLink href="/about" className="pointer-events-auto">
+          <TransitionLink href="/home" className="pointer-events-auto">
               <h1 className="text-8xl md:text-9xl font-bold tracking-tighter cursor-pointer text-black">
                 Click to enter!!
               </h1>
