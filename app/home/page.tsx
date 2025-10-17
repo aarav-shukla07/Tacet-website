@@ -11,6 +11,7 @@ import { CardBody, CardContainer, CardItem } from "../../components/ui/3d-card";
 import { Timeline } from "../../components/ui/Timeline";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 const roles = ["Know-how", "Working"];
 
@@ -228,6 +229,7 @@ export default function Home() {
           <Timeline items={steps} />
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
