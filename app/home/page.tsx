@@ -312,7 +312,7 @@ export default function Home() {
         <section className="max-w-4xl mx-auto mb-24">
           <div className="flex justify-center mb-16">
             <div className="relative">
-              <img
+              <Image
                 src="/hand-drawn-circle.svg"
                 alt="Hand-drawn circle"
                 className="absolute top-1/2 left-1/2 w-[150%] h-[250%] -translate-x-1/2 -translate-y-1/2"
