@@ -1,40 +1,41 @@
 "use client";
 
-import PillNavbar from "../../components/header";
-import TransitionLink from "../../components/TransitionLink";
+import PillNavbar from "@/components/header";
+import TransitionLink from "@/components/TransitionLink";
 import { motion } from "framer-motion";
-import { CheckCircle, Code, Download, Link, Zap, ShieldCheck, Layers } from "lucide-react";
-import "../globals.css";
-import { jetbrainsMono, poppins } from "../../lib/fonts";
-import { LayoutTextFlip } from "../../components/LayoutTextFlip";
-import { CardBody, CardContainer, CardItem } from "../../components/ui/3d-card";
-import { Timeline } from "../../components/ui/Timeline";
+import { Download } from "lucide-react";
+import "@/app/globals.css";
+import { jetbrainsMono, poppins } from "@/lib/fonts";
+import { LayoutTextFlip } from "@/components/LayoutTextFlip";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { Timeline } from "@/components/ui/Timeline";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import VideoPlayer from "@/components/ui/VideoPlayer"; // Import the new component
 
 const roles = ["Know-how", "Working"];
 
 const steps = [
-    {
-      number: "01",
-      title: "Download & Install",
-      description:
-        "Grab the latest version of TACET for your operating system. A quick and easy installation process will have you ready in seconds.",
-    },
-    {
-      number: "02",
-      title: "Run in the Background",
-      description:
-        "Launch TACET before your meeting or coding session. It runs silently in the background, consuming minimal resources until you need it.",
-    },
-    {
-      number: "03",
-      title: "Activate When Needed",
-      description:
-        "Use a simple, customizable hotkey to bring up TACET's assistance overlay. Get the information you need and dismiss it instantly to maintain your flow.",
-    },
-  ];
+  {
+    number: "01",
+    title: "Download & Install",
+    description:
+      "Grab the latest version of TACET for your operating system. A quick and easy installation process will have you ready in seconds.",
+  },
+  {
+    number: "02",
+    title: "Run in the Background",
+    description:
+      "Launch TACET before your meeting or coding session. It runs silently in the background, consuming minimal resources until you need it.",
+  },
+  {
+    number: "03",
+    title: "Activate When Needed",
+    description:
+      "Use a simple, customizable hotkey to bring up TACET's assistance overlay. Get the information you need and dismiss it instantly to maintain your flow.",
+  },
+];
 
 export default function Home() {
   return (
@@ -76,6 +77,7 @@ export default function Home() {
             </TransitionLink>
           </motion.div>
         </section>
+
         
 
         {/* KNOW HOW SECTION */}
@@ -108,6 +110,19 @@ export default function Home() {
             assessments and coding interviews, providing the edge you
             need—completely undetected.
           </motion.p>
+          {/* VIDEOS SECTION */}
+        <section className="max-w-7xl mx-auto mt-20 mb-20 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <VideoPlayer
+              title="Live Leetcode Demo"
+              src="/videos/leetcode.mp4"
+            />
+            <VideoPlayer
+              title="Online Gmeet Sharing Demo"
+              src="videos/gmeet.mp4"
+            />
+          </div>
+        </section>
         </section>
 
         {/* APP PREVIEW CONTAINER SCROLL SECTION */}
@@ -135,8 +150,6 @@ export default function Home() {
           </ContainerScroll>
         </div>
 
-        
-
         {/* HOW IT HELPS YOU SECTION */}
         <section className="max-w-7xl mx-auto mb-12 px-4">
           <div className="flex justify-center mb-16">
@@ -157,74 +170,117 @@ export default function Home() {
                 <CardItem translateZ="50" className="text-xl font-bold text-white">
                   Real-Time, Discreet Assistance
                 </CardItem>
-                <CardItem as="p" translateZ="60" className="text-neutral-400 text-sm max-w-sm mt-2">
+                <CardItem
+                  as="p"
+                  translateZ="60"
+                  className="text-neutral-400 text-sm max-w-sm mt-2"
+                >
                   Operates as a subtle overlay, invisible to others on screen shares. Get the hints you need without anyone knowing.
                 </CardItem>
                 <CardItem translateZ="100" className="w-full mt-4">
-                  <img src="/images/img28.jpeg" className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl" alt="Discreet Assistance" />
+                  <img
+                    src="/images/img28.jpeg"
+                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                    alt="Discreet Assistance"
+                  />
                 </CardItem>
               </CardBody>
             </CardContainer>
-            
+
             <div className="lg:mt-24">
-                <CardContainer containerClassName="py-0">
+              <CardContainer containerClassName="py-0">
                 <CardBody className="bg-neutral-900/50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-sky-500/[0.1] dark:bg-neutral-900/50 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border border-white/10">
-                    <CardItem translateZ="50" className="text-xl font-bold text-white">
+                  <CardItem
+                    translateZ="50"
+                    className="text-xl font-bold text-white"
+                  >
                     Instant Code & Algorithm Help
-                    </CardItem>
-                    <CardItem as="p" translateZ="60" className="text-neutral-400 text-sm max-w-sm mt-2">
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="60"
+                    className="text-neutral-400 text-sm max-w-sm mt-2"
+                  >
                     Stuck on a problem? TACET provides smart code completions and concise explanations for algorithms.
-                    </CardItem>
-                    <CardItem translateZ="100" className="w-full mt-4">
-                    <img src="/images/img26.jpeg" className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl" alt="Code Help" />
-                    </CardItem>
+                  </CardItem>
+                  <CardItem translateZ="100" className="w-full mt-4">
+                    <img
+                      src="/images/img26.jpeg"
+                      className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                      alt="Code Help"
+                    />
+                  </CardItem>
                 </CardBody>
-                </CardContainer>
+              </CardContainer>
             </div>
 
             <CardContainer containerClassName="py-0">
               <CardBody className="bg-neutral-900/50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-sky-500/[0.1] dark:bg-neutral-900/50 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border border-white/10">
-                <CardItem translateZ="50" className="text-xl font-bold text-white">
+                <CardItem
+                  translateZ="50"
+                  className="text-xl font-bold text-white"
+                >
                   Boost Your Confidence
                 </CardItem>
-                <CardItem as="p" translateZ="60" className="text-neutral-400 text-sm max-w-sm mt-2">
+                <CardItem
+                  as="p"
+                  translateZ="60"
+                  className="text-neutral-400 text-sm max-w-sm mt-2"
+                >
                   Face interviews with the confidence that you have an intelligent safety net to back you up.
                 </CardItem>
                 <CardItem translateZ="100" className="w-full mt-4">
-                  <img src="/images/img17.jpeg" className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl" alt="Confidence Boost" />
+                  <img
+                    src="/images/img17.jpeg"
+                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                    alt="Confidence Boost"
+                  />
                 </CardItem>
               </CardBody>
             </CardContainer>
 
             <div className="lg:mt-24">
-                <CardContainer containerClassName="py-0">
+              <CardContainer containerClassName="py-0">
                 <CardBody className="bg-neutral-900/50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-sky-500/[0.1] dark:bg-neutral-900/50 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border border-white/10">
-                    <CardItem translateZ="50" className="text-xl font-bold text-white">
+                  <CardItem
+                    translateZ="50"
+                    className="text-xl font-bold text-white"
+                  >
                     Platform Agnostic
-                    </CardItem>
-                    <CardItem as="p" translateZ="60" className="text-neutral-400 text-sm max-w-sm mt-2">
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="60"
+                    className="text-neutral-400 text-sm max-w-sm mt-2"
+                  >
                     Works seamlessly over any screen-sharing application like Zoom, Google Meet, or Microsoft Teams.
-                    </CardItem>
-                    <CardItem translateZ="100" className="w-full mt-4">
-                    <img src="/images/img36.jpeg" className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl" alt="Platform Agnostic" />
-                    </CardItem>
+                  </CardItem>
+                  <CardItem translateZ="100" className="w-full mt-4">
+                    <img
+                      src="/images/img36.jpeg"
+                      className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                      alt="Platform Agnostic"
+                    />
+                  </CardItem>
                 </CardBody>
-                </CardContainer>
+              </CardContainer>
             </div>
           </div>
         </section>
 
         {/* HOW TO USE IT SECTION */}
         <section className="max-w-4xl mx-auto mb-24">
-            <div className="relative inline-block">
-              <img
-                src="/hand-drawn-circle.svg"
-                alt="Hand-drawn circle"
-                className="absolute top-1/4 left-1/2 w-[125%] h-[200%] -translate-x-1/2 -translate-y-1/2"
-              />
-          <h2 className="text-4xl font-bold text-center mb-16 text-white">
-            Get Started in 3 Simple Steps
-          </h2>
+          <div className="flex justify-center mb-16">
+            <div className="relative">
+                <img
+                    src="/hand-drawn-circle.svg"
+                    alt="Hand-drawn circle"
+                    className="absolute top-1/2 left-1/2 w-[150%] h-[250%] -translate-x-1/2 -translate-y-1/2"
+                />
+                <h2 className="relative text-4xl font-bold text-center text-white">
+                    Get Started in 3 Simple Steps
+                </h2>
+            </div>
           </div>
           <Timeline items={steps} />
         </section>
