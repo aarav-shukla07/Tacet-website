@@ -12,6 +12,7 @@ import "@/app/globals.css";
 import { jetbrainsMono } from "@/lib/fonts";
 import Image from "next/image";
 import { FlippableImage } from "@/components/Flipable-image";
+import Footer from "@/components/Footer";
 
 export default function About() {
   return (
@@ -283,6 +284,7 @@ export default function About() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
