@@ -235,11 +235,7 @@ export default function Home() {
         <section className="max-w-7xl mx-auto mb-12 px-4">
           <div className="flex justify-center mb-16">
             <div className="relative inline-block">
-              <img
-                src="/hand-drawn-circle.svg"
-                alt="Hand-drawn circle"
-                className="absolute top-1/2 left-1/4 w-[125%] h-[200%] -translate-x-1/2 -translate-y-1/2"
-              />
+              
               <h2 className="relative text-4xl font-bold text-center text-white">
                 How TACET Helps You Succeed
               </h2>
@@ -312,11 +308,7 @@ export default function Home() {
         <section className="max-w-4xl mx-auto mb-24">
           <div className="flex justify-center mb-16">
             <div className="relative">
-              <Image
-                src="/hand-drawn-circle.svg"
-                alt="Hand-drawn circle"
-                className="absolute top-1/2 left-1/2 w-[150%] h-[250%] -translate-x-1/2 -translate-y-1/2"
-              />
+              
               <h2 className="relative text-4xl font-bold text-center text-white">
                 Get Started in 3 Simple Steps
               </h2>

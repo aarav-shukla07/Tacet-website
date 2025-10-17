@@ -97,11 +97,7 @@ export default function About() {
         {/* WHY TACET? (FEATURES) SECTION */}
         <section className="max-w-7xl mx-auto mb-12 px-4">
           <div className="relative flex justify-center items-center mb-16">
-            <img
-              src="/hand-drawn-circle.svg"
-              alt="hand drawn circle"
-              className="absolute w-full max-w-2xl -top-12 opacity-30"
-            />
+            
             <h2 className="text-4xl font-bold text-center text-white relative">
               How TACET Helps You Succeed
             </h2>
