@@ -26,8 +26,8 @@ export const Timeline = ({ items }: { items: TimelineItem[] }) => {
           >
             {/* The dot on the timeline */}
             <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center bg-black z-10">
-                <div className="w-8 h-8 rounded-full bg-sky-400/20 border-2 border-sky-400 flex items-center justify-center">
-                    <div className="w-3 h-3 rounded-full bg-sky-400"/>
+                <div className="w-8 h-8 rounded-full bg-grey-400/20 border-2 border-grey-400 flex items-center justify-center">
+                    <div className="w-3 h-3 rounded-full bg-grey-400"/>
                 </div>
             </div>
             
