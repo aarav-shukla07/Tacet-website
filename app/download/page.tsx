@@ -121,6 +121,14 @@ export default function DownloadPage() {
   >
     Step 3: Download TACET
   </motion.h2>
+  <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-lg md:text-xl text-neutral-300 max-w-2xl mx-auto mb-4"
+          >
+            I am working on making TACET available for mac and linux devices too, hopefully will launch it for mac and linux soon...
+          </motion.p>
 
   <div className="flex flex-col md:flex-row justify-center gap-6 mb-4">
     <TransitionLink
