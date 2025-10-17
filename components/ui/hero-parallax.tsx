@@ -157,4 +157,3 @@ export const ProductCard = ({
     </motion.div>
   );
 };
-

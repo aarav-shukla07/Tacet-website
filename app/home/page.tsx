@@ -233,7 +233,79 @@ export default function Home() {
 
         {/* HOW IT HELPS YOU SECTION */}
         <section className="max-w-7xl mx-auto mb-12 px-4">
-          {/* ... Your existing Cards content ... */}
+          <div className="flex justify-center mb-16">
+            <div className="relative inline-block">
+              <img
+                src="/hand-drawn-circle.svg"
+                alt="Hand-drawn circle"
+                className="absolute top-1/2 left-1/4 w-[125%] h-[200%] -translate-x-1/2 -translate-y-1/2"
+              />
+              <h2 className="relative text-4xl font-bold text-center text-white">
+                How TACET Helps You Succeed
+              </h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+            <CardContainer containerClassName="py-0">
+              <CardBody className="bg-neutral-900/50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-sky-500/[0.1] dark:bg-neutral-900/50 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border border-white/10">
+                <CardItem translateZ="50" className="text-xl font-bold text-white">
+                  Real-Time, Discreet Assistance
+                </CardItem>
+                <CardItem as="p" translateZ="60" className="text-neutral-400 text-sm max-w-sm mt-2">
+                  Operates as a subtle overlay, invisible to others on screen shares. Get the hints you need without anyone knowing.
+                </CardItem>
+                <CardItem translateZ="100" className="w-full mt-4">
+                  <img src="/images/img28.jpeg" className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl" alt="Discreet Assistance" />
+                </CardItem>
+              </CardBody>
+            </CardContainer>
+            
+            <div className="lg:mt-24">
+                <CardContainer containerClassName="py-0">
+                <CardBody className="bg-neutral-900/50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-sky-500/[0.1] dark:bg-neutral-900/50 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border border-white/10">
+                    <CardItem translateZ="50" className="text-xl font-bold text-white">
+                    Instant Code & Algorithm Help
+                    </CardItem>
+                    <CardItem as="p" translateZ="60" className="text-neutral-400 text-sm max-w-sm mt-2">
+                    Stuck on a problem? TACET provides smart code completions and concise explanations for algorithms.
+                    </CardItem>
+                    <CardItem translateZ="100" className="w-full mt-4">
+                    <img src="/images/img26.jpeg" className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl" alt="Code Help" />
+                    </CardItem>
+                </CardBody>
+                </CardContainer>
+            </div>
+
+            <CardContainer containerClassName="py-0">
+              <CardBody className="bg-neutral-900/50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-sky-500/[0.1] dark:bg-neutral-900/50 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border border-white/10">
+                <CardItem translateZ="50" className="text-xl font-bold text-white">
+                  Boost Your Confidence
+                </CardItem>
+                <CardItem as="p" translateZ="60" className="text-neutral-400 text-sm max-w-sm mt-2">
+                  Face interviews with the confidence that you have an intelligent safety net to back you up.
+                </CardItem>
+                <CardItem translateZ="100" className="w-full mt-4">
+                  <img src="/images/img17.jpeg" className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl" alt="Confidence Boost" />
+                </CardItem>
+              </CardBody>
+            </CardContainer>
+
+            <div className="lg:mt-24">
+                <CardContainer containerClassName="py-0">
+                <CardBody className="bg-neutral-900/50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-sky-500/[0.1] dark:bg-neutral-900/50 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border border-white/10">
+                    <CardItem translateZ="50" className="text-xl font-bold text-white">
+                    Platform Agnostic
+                    </CardItem>
+                    <CardItem as="p" translateZ="60" className="text-neutral-400 text-sm max-w-sm mt-2">
+                    Works seamlessly over any screen-sharing application like Zoom, Google Meet, or Microsoft Teams.
+                    </CardItem>
+                    <CardItem translateZ="100" className="w-full mt-4">
+                    <img src="/images/img36.jpeg" className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl" alt="Platform Agnostic" />
+                    </CardItem>
+                </CardBody>
+                </CardContainer>
+            </div>
+          </div>
         </section>
 
         {/* HOW TO USE IT SECTION */}
