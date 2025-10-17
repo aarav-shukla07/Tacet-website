@@ -19,10 +19,10 @@ const Footer = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
       viewport={{ once: true }}
-      className="bg-neutral-950/50 border-t border-white/10 text-neutral-400 py-12 px-4 md:px-8 relative overflow-hidden"
+      className="bg-white border-t border-white/10 text-black py-12 px-4 md:px-8 relative overflow-hidden"
     >
       {/* Animated background gradient */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <motion.div
           animate={{
             backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
@@ -34,12 +34,12 @@ const Footer = () => {
           }}
           className="w-full h-full bg-gradient-to-r from-neutral-900 via-sky-900/20 to-neutral-900 bg-[size:200%_100%]"
         ></motion.div>
-      </div>
+      </div> */}
 
       <div className={`${poppins.className} max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10`}>
         {/* Column 1: Brand and Copyright */}
         <div>
-          <h3 className="text-2xl font-bold text-white mb-2">TACET</h3>
+          <h3 className="text-2xl font-bold text-black mb-2">TACET</h3>
           <p className="text-sm">Your silent advantage in a digital world.</p>
           <p className="text-xs mt-8">
             © {new Date().getFullYear()} TACET. Made by Aarav Shukla.
@@ -48,7 +48,7 @@ const Footer = () => {
 
         {/* Column 2: Quick Links */}
         <div>
-          <h4 className="font-semibold text-white mb-4">Quick Links</h4>
+          <h4 className="font-semibold text-grey mb-4">Quick Links</h4>
           <ul className="space-y-2">
             <li>
               <TransitionLink href="/home" className="hover:text-sky-400 transition-colors">Home</TransitionLink>
@@ -64,15 +64,15 @@ const Footer = () => {
 
         {/* Column 3: Social Media */}
         <div>
-          <h4 className="font-semibold text-white mb-4">Follow Us</h4>
+          <h4 className="font-semibold text-grey mb-4">Follow Me</h4>
           <div className="flex space-x-4">
-            <motion.a href="https://github.com/aarav-shukla07" whileHover={{ scale: 1.2, rotate: 10 }} className="hover:text-white transition-colors">
+            <motion.a href="https://github.com/aarav-shukla07" whileHover={{ scale: 1.2, rotate: 10 }} className="hover:text-blue transition-colors">
               <Github />
             </motion.a>
-            <motion.a href="https://x.com/aaravshukla_10" whileHover={{ scale: 1.2, rotate: 10 }} className="hover:text-white transition-colors">
+            <motion.a href="https://x.com/aaravshukla_10" whileHover={{ scale: 1.2, rotate: 10 }} className="hover:text-blue transition-colors">
               <Twitter />
             </motion.a>
-            <motion.a href="https://www.linkedin.com/in/aarav-shukla10/" whileHover={{ scale: 1.2, rotate: 10 }} className="hover:text-white transition-colors">
+            <motion.a href="https://www.linkedin.com/in/aarav-shukla10/" whileHover={{ scale: 1.2, rotate: 10 }} className="hover:text-blue transition-colors">
               <Linkedin />
             </motion.a>
           </div>
